@@ -1,0 +1,31 @@
+<div class="container" *ngIf="product">
+  <div class="header">
+    <p-button icon="pi pi-arrow-left" label="Back" severity="secondary" (onClick)="goBack()" />
+    <h1>{{ product.name }}</h1>
+  </div>
+
+  <p-card>
+    <div class="detail-grid">
+      <div class="detail-item">
+        <span class="label">Name</span>
+        <span class="value">{{ product.name }}</span>
+      </div>
+      <div class="detail-item">
+        <span class="label">Description</span>
+        <span class="value">{{ product.description }}</span>
+      </div>
+      <div class="detail-item">
+        <span class="label">Price</span>
+        <span class="value price">€{{ product.price }}</span>
+      </div>
+      <div class="detail-item">
+        <span class="label">Stock</span>
+        <p-tag [value]="product.stock + ' items'" severity="success" />
+      </div>
+      <div class="detail-item">
+        <span class="label">Created at</span>
+        <span class="value">{{ product.createdAt | date:'medium' }}</span>
+      </div>
+    </div>
+  </p-card>
+</div>

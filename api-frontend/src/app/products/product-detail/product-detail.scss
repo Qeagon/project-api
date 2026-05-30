@@ -1,0 +1,62 @@
+.container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+}
+
+.detail-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
+
+.value {
+  font-size: 1.1rem;
+  color: white;
+
+  &.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+  }
+}
+
+:host ::ng-deep {
+  .p-card {
+    background: #ffb3c6 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 20px rgba(255, 100, 130, 0.2) !important;
+  }
+
+  .p-tag {
+    background: rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+  }
+}
